@@ -5,6 +5,7 @@ const Practice = () => {
   return (
     <>
       <h1>Count is : {count} </h1>
+      {console.log(count)}
       <button onClick={() => setCount((c) => c + 1)}>Increment</button>
     </>
   );

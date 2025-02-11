@@ -1,11 +1,14 @@
 import "./App.css";
+import Child from "./Child";
+import Parent from "./Parent";
 import Practice from "./practice";
 
 function App() {
   return (
     <>
-      <h1>Yash</h1>
-      <Practice />
+      {/* <Practice /> */}
+      <Parent />
+      {/* <Child /> */}
     </>
   );
 }
