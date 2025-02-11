@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       {/* <Practice /> */}
-      <Parent />
-      {/* <Child /> */}
+      {/* <Parent /> */}
+      <Child />
     </>
   );
 }
