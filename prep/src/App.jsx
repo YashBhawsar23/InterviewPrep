@@ -1,9 +1,11 @@
 import "./App.css";
+import Practice from "./practice";
 
 function App() {
   return (
     <>
-      <h1>Yash Bhawsar</h1>
+      <h1>Yash</h1>
+      <Practice />
     </>
   );
 }
