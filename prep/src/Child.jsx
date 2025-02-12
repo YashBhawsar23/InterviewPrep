@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 const Child = (props) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((json) => setData(json));
+  const [count, setCount] = useState(0);
+
+  const handleClick = useCallback(() => {
+    console.log("Button Clicked");
   }, []);
 
   return (
     <>
-      <ul>
-        {data.slice(0, 5).map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
+      <h1>Count: {count} </h1>
+      <button onClick={handleClick}>Click</button>
     </>
   );
 };
