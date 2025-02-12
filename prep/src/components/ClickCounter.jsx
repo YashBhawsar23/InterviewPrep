@@ -1,14 +1,13 @@
-import { useState } from "react";
+import WithCounter from "./WithCounter";
 
-const ClickCounter = () => {
-  const [count, setCount] = useState(0);
-
+const ClickCounter = (props) => {
+  const { count, incrementCount } = props;
   return (
     <>
-      <button onClick={() => setCount((c) => c + 1)}> Click Me</button>
+      <button onClick={incrementCount}> Click Me</button>
       <h2>Count is: {count} </h2>
     </>
   );
 };
 
-export default ClickCounter;
+export default WithCounter(ClickCounter, 5);

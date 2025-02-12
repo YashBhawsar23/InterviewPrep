@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import WithCounter from "./WithCounter";
 
-const HoverCounter = () => {
-  const [count, setCount] = useState(0);
+const HoverCounter = (props) => {
+  const { count, incrementCount } = props;
   return (
     <>
-      <button onMouseOver={() => setCount((c) => c + 1)}> Hover Me</button>
+      <button onMouseOver={incrementCount}> Hover Me</button>
       <h2>Count is: {count} </h2>
     </>
   );
 };
 
-export default HoverCounter;
+export default WithCounter(HoverCounter, 10);
